@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Sai Eshaan | Finance</title>
+  <meta name="description" content="Sai Eshaan - Finance professional specializing in FP&A, financial modeling, valuation, and investment analysis.">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      background: #07111f;
+      color: #e8edf5;
+      line-height: 1.6;
+    }
+
+    /* NAVIGATION */
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(7, 17, 31, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .nav-container {
+      max-width: 1150px;
+      margin: auto;
+      padding: 18px 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: #ffffff;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+    }
+
+    .nav-links a {
+      color: #b8c3d6;
+      text-decoration: none;
+      font-size: 14px;
+      transition: 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #5ea8ff;
+    }
+
+    /* HERO */
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      max-width: 1150px;
+      margin: auto;
+      padding: 120px 25px 70px;
+    }
+
+    .hero-content {
+      max-width: 850px;
+    }
+
+    .eyebrow {
+      color: #5ea8ff;
+      font-size: 15px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      font-size: clamp(55px, 9vw, 100px);
+      line-height: 0.95;
+      color: #ffffff;
+      margin-bottom: 25px;
+      letter-spacing: -4px;
+    }
+
+    .hero h2 {
+      font-size: clamp(20px, 3vw, 30px);
+      color: #9aa9bd;
+      font-weight: 400;
+      margin-bottom: 25px;
+    }
+
+    .hero p {
+      max-width: 720px;
+      font-size: 18px;
+      color: #aab5c5;
+      margin-bottom: 38px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 13px 23px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      transition: 0.25s;
+    }
+
+    .btn-primary {
+      background: #2979ff;
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: #4b91ff;
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      border: 1px solid #3b4b62;
+      color: #dce4ef;
+    }
+
+    .btn-secondary:hover {
+      border-color: #5ea8ff;
+      color: #5ea8ff;
+      transform: translateY(-2px);
+    }
+
+    /* GENERAL */
+
+    section {
+      max-width: 1150px;
+      margin: auto;
+      padding: 100px 25px;
+    }
+
+    .section-label {
+      color: #5ea8ff;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+    }
+
+    .section-title {
+      color: #ffffff;
+      font-size: 38px;
+      margin-bottom: 45px;
+    }
+
+    .section-text {
+      color: #aab5c5;
+      font-size: 17px;
+      max-width: 850px;
+    }
+
+    .divider {
+      max-width: 1100px;
+      height: 1px;
+      background: rgba(255,255,255,0.08);
+      margin: auto;
+    }
+
+    /* ABOUT */
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+      gap: 80px;
+    }
+
+    .about-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+    }
+
+    .stat {
+      padding: 25px;
+      background: #0c1929;
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 8px;
+    }
+
+    .stat-number {
+      color: #ffffff;
+      font-size: 28px;
+      font-weight: 700;
+    }
+
+    .stat-label {
+      color: #8190a4;
+      font-size: 13px;
+      margin-top: 5px;
+    }
+
+    /* EXPERIENCE */
+
+    .experience-item {
+      display: grid;
+      grid-template-columns: 230px 1fr;
+      gap: 45px;
+      margin-bottom: 65px;
+    }
+
+    .experience-date {
+      color: #718096;
+      font-size: 14px;
+    }
+
+    .experience-company {
+      font-size: 22px;
+      color: #ffffff;
+      margin-bottom: 3px;
+    }
+
+    .experience-role {
+      color: #5ea8ff;
+      margin-bottom: 15px;
+    }
+
+    .experience-details ul {
+      padding-left: 18px;
+      color: #aab5c5;
+    }
+
+    .experience-details li {
+      margin-bottom: 9px;
+    }
+
+    /* PROJECTS */
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+    }
+
+    .project-card {
+      background: #0c1929;
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 9px;
+      padding: 32px;
+      transition: 0.25s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(94,168,255,0.45);
+    }
+
+    .project-number {
+      color: #5ea8ff;
+      font-size: 13px;
+      margin-bottom: 20px;
+    }
+
+    .project-card h3 {
+      color: #ffffff;
+      font-size: 21px;
+      margin-bottom: 12px;
+    }
+
+    .project-card p {
+      color: #9aa9bd;
+      font-size: 15px;
+    }
+
+    .tags {
+      margin-top: 20px;
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .tag {
+      font-size: 11px;
+      color: #9fb9d8;
+      border: 1px solid #263a52;
+      padding: 5px 9px;
+      border-radius: 4px;
+    }
+
+    /* EDUCATION */
+
+    .education-card {
+      border-left: 2px solid #2979ff;
+      padding-left: 25px;
+      margin-bottom: 40px;
+    }
+
+    .education-card h3 {
+      color: white;
+      font-size: 21px;
+    }
+
+    .education-card .degree {
+      color: #b6c2d2;
+      margin-top: 5px;
+    }
+
+    .education-card .edu-meta {
+      color: #75869c;
+      font-size: 14px;
+      margin-top: 7px;
+    }
+
+    /* SKILLS */
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .skill-box {
+      background: #0c1929;
+      border: 1px solid rgba(255,255,255,0.07);
+      padding: 28px;
+      border-radius: 8px;
+    }
+
+    .skill-box h3 {
+      color: white;
+      font-size: 17px;
+      margin-bottom: 15px;
+    }
+
+    .skill-box p {
+      color: #929fb0;
+      font-size: 14px;
+      line-height: 1.9;
+    }
+
+    /* CERTIFICATIONS */
+
+    .cert-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+
+    .cert {
+      padding: 18px 22px;
+      background: #0c1929;
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 7px;
+      color: #b5c0cf;
+    }
+
+    /* CONTACT */
+
+    .contact {
+      text-align: center;
+      max-width: 750px;
+    }
+
+    .contact .section-title {
+      font-size: 50px;
+      margin-bottom: 20px;
+    }
+
+    .contact p {
+      color: #a5b0c0;
+      font-size: 17px;
+      margin-bottom: 30px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: #58687d;
+      font-size: 12px;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 800px) {
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero h1 {
+        letter-spacing: -2px;
+      }
+
+      .about-grid,
+      .projects-grid,
+      .skills-grid,
+      .cert-list {
+        grid-template-columns: 1fr;
+      }
+
+      .experience-item {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+
+      .about-grid {
+        gap: 45px;
+      }
+
+      section {
+        padding: 75px 22px;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<nav>
+  <div class="nav-container">
+    <div class="logo">SE.</div>
+
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#education">Education</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+
+<!-- HERO -->
+
+<div class="hero">
+  <div class="hero-content">
+
+    <div class="eyebrow">Finance Professional</div>
+
+    <h1>Sai Eshaan</h1>
+
+    <h2>FP&amp;A · Corporate Finance · Investment Analysis</h2>
+
+    <p>
+      Finance professional with experience across financial planning,
+      forecasting, valuation, investment analysis, and management reporting.
+      I combine financial modeling with data-driven analysis to understand
+      business performance and support better strategic decisions.
+    </p>
+
+    <div class="buttons">
+      <a href="#experience" class="btn btn-primary">View My Experience</a>
+
+      <a href="mailto:eshaanjp@gmail.com" class="btn btn-secondary">
+        Contact Me
+      </a>
+
+      <a href="https://www.linkedin.com/" target="_blank" class="btn btn-secondary">
+        LinkedIn ↗
+      </a>
+    </div>
+
+  </div>
+</div>
+
+
+<div class="divider"></div>
+
+
+<!-- ABOUT -->
+
+<section id="about">
+
+  <div class="section-label">01 / About</div>
+  <h2 class="section-title">Finance, strategy &amp; analysis.</h2>
+
+  <div class="about-grid">
+
+    <div>
+      <p class="section-text">
+        I am a finance professional with a Master of Science in Finance from
+        Babson College's F.W. Olin Graduate School of Business and professional
+        experience spanning financial analysis, forecasting, budgeting,
+        financial modeling, and investment analysis.
+        <br><br>
+        My experience includes analyzing large-scale revenue and cost data,
+        developing forecasts and scenario models, evaluating business
+        performance, and translating financial information into insights
+        that support management decisions.
+        <br><br>
+        I am particularly interested in opportunities across FP&amp;A,
+        corporate finance, investment analysis, and other analytical finance
+        functions where rigorous financial thinking can directly influence
+        business strategy.
+      </p>
+    </div>
+
+    <div class="about-stats">
+
+      <div class="stat">
+        <div class="stat-number">$100M+</div>
+        <div class="stat-label">Revenue &amp; cost data analyzed</div>
+      </div>
+
+      <div class="stat">
+        <div class="stat-number">20%</div>
+        <div class="stat-label">Forecast accuracy improvement</div>
+      </div>
+
+      <div class="stat">
+        <div class="stat-number">$1M</div>
+        <div class="stat-label">Portfolio managed</div>
+      </div>
+
+      <div class="stat">
+        <div class="stat-number">30+</div>
+        <div class="stat-label">Financial reports &amp; analyses</div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<div class="divider"></div>
+
+
+<!-- EXPERIENCE -->
+
+<section id="experience">
+
+  <div class="section-label">02 / Experience</div>
+  <h2 class="section-title">Professional Experience</h2>
+
+
+  <div class="experience-item">
+
+    <div class="experience-date">
+      APR 2026 — PRESENT
+    </div>
+
+    <div class="experience-details">
+
+      <h3 class="experience-company">DMV Music Alliance</h3>
+      <div class="experience-role">Finance Specialist · Remote</div>
+
+      <ul>
+        <li>
+          Prepare monthly financial reports and variance analyses using
+          Intuit QuickBooks to support operating expenditure management.
+        </li>
+
+        <li>
+          Reconcile 100+ financial transactions monthly, supporting accurate
+          accounting records and timely month-end reporting.
+        </li>
+
+        <li>
+          Assist in developing and monitoring annual operating budgets
+          exceeding $100K, tracking actual performance against forecasts
+          and identifying key budget variances.
+        </li>
+      </ul>
+
+    </div>
+  </div>
+
+
+  <div class="experience-item">
+
+    <div class="experience-date">
+      MAY 2025 — JUL 2025
+    </div>
+
+    <div class="experience-details">
+
+      <h3 class="experience-company">SRF Capital Studio</h3>
+      <div class="experience-role">Finance Intern · Remote</div>
+
+      <ul>
+        <li>
+          Built and enhanced financial models for 3+ early-stage companies,
+          supporting capital allocation and strategic growth decisions.
+        </li>
+
+        <li>
+          Analyzed business performance drivers and market dynamics to
+          inform investment recommendations and operating strategy.
+        </li>
+
+        <li>
+          Partnered with senior stakeholders to refine reporting frameworks
+          and improve portfolio performance tracking.
+        </li>
+      </ul>
+
+    </div>
+  </div>
+
+
+  <div class="experience-item">
+
+    <div class="experience-date">
+      SEP 2021 — MAY 2024
+    </div>
+
+    <div class="experience-details">
+
+      <h3 class="experience-company">PricewaterhouseCoopers (PwC)</h3>
+      <div class="experience-role">Specialist · Bangalore, India</div>
+
+      <ul>
+
+        <li>
+          Analyzed $100M+ in revenue and cost data to support business unit
+          performance evaluation and strategic decision-making.
+        </li>
+
+        <li>
+          Built and maintained financial forecasts and scenario models,
+          improving forecast accuracy by 20%.
+        </li>
+
+        <li>
+          Performed variance, trend, and sensitivity analysis to identify
+          key performance drivers and uncover cost optimization opportunities
+          with approximately 8% impact.
+        </li>
+
+        <li>
+          Developed Tableau management dashboards to track KPIs and provide
+          real-time financial insights to leadership.
+        </li>
+
+        <li>
+          Evaluated ROI and efficiency of business initiatives through
+          spend-versus-performance analysis.
+        </li>
+
+        <li>
+          Delivered 30+ financial reports and planning analyses supporting
+          budgeting, forecasting, and operational decision-making.
+        </li>
+
+      </ul>
+
+    </div>
+  </div>
+
+</section>
+
+
+<div class="divider"></div>
+
+
+<!-- PROJECTS -->
+
+<section id="projects">
+
+  <div class="section-label">03 / Selected Work</div>
+  <h2 class="section-title">Finance Projects</h2>
+
+  <div class="projects-grid">
+
+
+    <div class="project-card">
+
+      <div class="project-number">PROJECT 01</div>
+
+      <h3>Equity Valuation of Public Companies</h3>
+
+      <p>
+        Built integrated financial models using discounted cash flow and
+        comparable-company analysis, incorporating scenario and sensitivity
+        analysis to evaluate strategic investment opportunities.
+      </p>
+
+      <div class="tags">
+        <span class="tag">DCF</span>
+        <span class="tag">Comps</span>
+        <span class="tag">Valuation</span>
+        <span class="tag">Sensitivity Analysis</span>
+      </div>
+
+    </div>
+
+
+    <div class="project-card">
+
+      <div class="project-number">PROJECT 02</div>
+
+      <h3>$1M Portfolio Management &amp; Investment Analysis</h3>
+
+      <p>
+        Built and managed a $1 million portfolio using Bloomberg,
+        incorporating fundamental, market, and macroeconomic analysis.
+        Monitored performance and risk across equities and options using
+        risk-adjusted performance metrics.
+      </p>
+
+      <div class="tags">
+        <span class="tag">Bloomberg</span>
+        <span class="tag">Portfolio Management</span>
+        <span class="tag">Equities</span>
+        <span class="tag">Options</span>
+        <span class="tag">Risk Analysis</span>
+      </div>
+
+    </div>
+
+
+    <div class="project-card">
+
+      <div class="project-number">RESEARCH</div>
+
+      <h3>Investment Research</h3>
+
+      <p>
+        Independent company and investment analysis combining financial
+        performance, valuation, competitive positioning, business drivers,
+        and risk assessment.
+      </p>
+
+      <div class="tags">
+        <span class="tag">Equity Research</span>
+        <span class="tag">Financial Analysis</span>
+        <span class="tag">Investment Thesis</span>
+      </div>
+
+    </div>
+
+
+    <div class="project-card">
+
+      <div class="project-number">COMING NEXT</div>
+
+      <h3>More Research &amp; Financial Models</h3>
+
+      <p>
+        Additional valuation work, company research, financial models,
+        and investment analysis will be added to this portfolio over time.
+      </p>
+
+      <div class="tags">
+        <span class="tag">Research</span>
+        <span class="tag">Modeling</span>
+        <span class="tag">Strategy</span>
+      </div>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+<div class="divider"></div>
+
+
+<!-- EDUCATION -->
+
+<section id="education">
+
+  <div class="section-label">04 / Education</div>
+  <h2 class="section-title">Education</h2>
+
+
+  <div class="education-card">
+
+    <h3>Babson College</h3>
+
+    <div class="degree">
+      F.W. Olin Graduate School of Business<br>
+      Master of Science in Finance
+    </div>
+
+    <div class="edu-meta">
+      Aug 2024 — Dec 2025 · GPA 3.6
+    </div>
+
+  </div>
+
+
+  <div class="education-card">
+
+    <h3>Center for Management Studies — Jain University</h3>
+
+    <div class="degree">
+      Bachelor of Business Administration · Finance
+    </div>
+
+    <div class="edu-meta">
+      Jun 2018 — Jul 2021 · GPA 3.84
+    </div>
+
+  </div>
+
+</section>
+
+
+<div class="divider"></div>
+
+
+<!-- SKILLS -->
+
+<section id="skills">
+
+  <div class="section-label">05 / Capabilities</div>
+  <h2 class="section-title">Skills &amp; Tools</h2>
+
+
+  <div class="skills-grid">
+
+
+    <div class="skill-box">
+
+      <h3>Financial Analysis</h3>
+
+      <p>
+        Financial Modeling<br>
+        Valuation<br>
+        Budgeting &amp; Forecasting<br>
+        Variance Analysis<br>
+        Credit Analysis<br>
+        Portfolio Management<br>
+        Financial Reporting
+      </p>
+
+    </div>
+
+
+    <div class="skill-box">
+
+      <h3>Technology</h3>
+
+      <p>
+        Advanced Excel<br>
+        Bloomberg<br>
+        S&amp;P Capital IQ<br>
+        Tableau<br>
+        Power BI<br>
+        Python<br>
+        SAP<br>
+        Alteryx<br>
+        NetSuite
+      </p>
+
+    </div>
+
+
+    <div class="skill-box">
+
+      <h3>Business</h3>
+
+      <p>
+        Data-Driven Decision Making<br>
+        Analytical Problem Solving<br>
+        Management Reporting<br>
+        Data Analysis<br>
+        Deck Creation<br>
+        Project Coordination
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- CERTIFICATIONS -->
+
+<section>
+
+  <div class="section-label">06 / Development</div>
+  <h2 class="section-title">Certifications</h2>
+
+
+  <div class="cert-list">
+
+    <div class="cert">
+      FMVA® Candidate — Corporate Finance Institute · 2026
+    </div>
+
+    <div class="cert">
+      Investment Banking Job Simulation — JPMorgan Chase · 2026
+    </div>
+
+    <div class="cert">
+      CFA Institute Investing Simulation Challenge — Top 10% · 2025
+    </div>
+
+    <div class="cert">
+      Bloomberg Market Concepts · 2024
+    </div>
+
+    <div class="cert">
+      Tableau Certified — Grant Thornton LLP · 2023
+    </div>
+
+    <div class="cert">
+      IOC Certification — Chartered Institute of Securities &amp; Investments · 2019
+    </div>
+
+  </div>
+
+</section>
+
+
+<div class="divider"></div>
+
+
+<!-- CONTACT -->
+
+<section id="contact" class="contact">
+
+  <div class="section-label">07 / Contact</div>
+
+  <h2 class="section-title">Let's connect.</h2>
+
+  <p>
+    I'm interested in opportunities across FP&amp;A, corporate finance,
+    investment analysis, and related finance functions.
+  </p>
+
+  <div class="buttons" style="justify-content:center;">
+
+    <a href="mailto:eshaanjp@gmail.com" class="btn btn-primary">
+      eshaanjp@gmail.com
+    </a>
+
+    <a href="https://www.linkedin.com/" target="_blank" class="btn btn-secondary">
+      LinkedIn ↗
+    </a>
+
+  </div>
+
+</section>
+
+
+<footer>
+  © 2026 Sai Eshaan. Built with GitHub Pages.
+</footer>
+
+
+</body>
+</html>
