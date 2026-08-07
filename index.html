@@ -512,7 +512,126 @@
     }
 
   }
+/* =========================
+   STORY / ABOUT SECTION
+   ========================= */
 
+.story-section {
+  padding-top: 105px;
+  padding-bottom: 110px;
+}
+
+.story-title {
+  color: #172033;
+  font-size: clamp(48px, 6vw, 72px);
+  line-height: 1;
+  letter-spacing: -3px;
+  font-weight: 700;
+  margin-bottom: 65px;
+}
+
+.story-grid {
+  display: grid;
+  grid-template-columns: 1.35fr 0.85fr;
+  gap: 90px;
+  align-items: start;
+}
+
+
+/* LEFT NARRATIVE */
+
+.story-content {
+  max-width: 680px;
+}
+
+.story-content p {
+  color: #667085;
+  font-size: 18px;
+  line-height: 1.85;
+  margin-bottom: 24px;
+}
+
+.story-content strong {
+  color: #172033;
+  font-weight: 650;
+}
+
+
+/* RIGHT PROFILE PANEL */
+
+.story-panel {
+  background: #FFFFFF;
+  border: 1px solid #E3E7ED;
+  border-radius: 7px;
+  padding: 12px 36px;
+  box-shadow: 0 8px 30px rgba(16, 24, 40, 0.05);
+}
+
+.story-detail {
+  padding: 24px 0;
+  border-bottom: 1px solid #E3E7ED;
+}
+
+.story-detail:last-child {
+  border-bottom: none;
+}
+
+.story-detail-label {
+  display: block;
+  color: #315B7D;
+  font-size: 10px;
+  font-weight: 750;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+}
+
+.story-detail p {
+  color: #172033;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.55;
+}
+
+.story-detail p span {
+  color: #667085;
+  font-weight: 400;
+}
+
+.story-detail a {
+  color: #172033;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.story-detail a:hover {
+  color: #315B7D;
+}
+
+
+/* STORY MOBILE */
+
+@media (max-width: 800px) {
+
+  .story-title {
+    font-size: 48px;
+    letter-spacing: -2px;
+    margin-bottom: 45px;
+  }
+
+  .story-grid {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .story-content p {
+    font-size: 16px;
+  }
+
+  .story-panel {
+    padding: 10px 25px;
+  }
+
+}
 </style>
   </style>
 </head>
@@ -590,59 +709,95 @@
 
 <!-- ABOUT -->
 
-<section id="about">
+<section id="about" class="story-section">
 
   <div class="section-label">01 / About</div>
-  <h2 class="section-title">Finance, strategy &amp; analysis.</h2>
 
-  <div class="about-grid">
+  <h2 class="story-title">The story so far</h2>
 
-    <div>
-      <p class="section-text">
-        I am a finance professional with a Master of Science in Finance from
-        Babson College's F.W. Olin Graduate School of Business and professional
-        experience spanning financial analysis, forecasting, budgeting,
-        financial modeling, and investment analysis.
-        <br><br>
-        My experience includes analyzing large-scale revenue and cost data,
-        developing forecasts and scenario models, evaluating business
-        performance, and translating financial information into insights
-        that support management decisions.
-        <br><br>
-        I am particularly interested in opportunities across FP&amp;A,
-        corporate finance, investment analysis, and other analytical finance
-        functions where rigorous financial thinking can directly influence
-        business strategy.
+  <div class="story-grid">
+
+    <!-- LEFT: NARRATIVE -->
+
+    <div class="story-content">
+
+      <p>
+        I'm a <strong>finance professional and Babson College MS Finance graduate</strong>
+        with experience across financial planning &amp; analysis, financial modeling,
+        investment analysis, and management reporting.
       </p>
+
+      <p>
+        At <strong>PricewaterhouseCoopers (PwC)</strong>, I analyzed more than
+        <strong>$100M in revenue and cost data</strong>, built financial forecasts
+        and scenario models, and performed variance, trend, and sensitivity analysis
+        to support business performance and strategic decision-making.
+      </p>
+
+      <p>
+        My experience also includes building financial models for early-stage
+        companies at <strong>SRF Capital Studio</strong> and supporting budgeting,
+        variance analysis, and monthly financial reporting at
+        <strong>DMV Music Alliance</strong>.
+      </p>
+
+      <p>
+        I'm drawn to finance roles where <strong>financial analysis, business
+        performance, and strategy</strong> come together — particularly across
+        FP&amp;A, corporate finance, investment analysis, and related analytical
+        finance functions.
+      </p>
+
     </div>
 
-    <div class="about-stats">
 
-      <div class="stat">
-        <div class="stat-number">$100M+</div>
-        <div class="stat-label">Revenue &amp; cost data analyzed</div>
+    <!-- RIGHT: PROFILE PANEL -->
+
+    <div class="story-panel">
+
+      <div class="story-detail">
+        <span class="story-detail-label">EDUCATION</span>
+        <p>
+          MS Finance, Babson College<br>
+          <span>F.W. Olin Graduate School of Business — 2025</span>
+        </p>
       </div>
 
-      <div class="stat">
-        <div class="stat-number">20%</div>
-        <div class="stat-label">Forecast accuracy improvement</div>
+      <div class="story-detail">
+        <span class="story-detail-label">EXPERIENCE</span>
+        <p>
+          PwC · SRF Capital Studio · DMV Music Alliance
+        </p>
       </div>
 
-      <div class="stat">
-        <div class="stat-number">$1M</div>
-        <div class="stat-label">Portfolio managed</div>
+      <div class="story-detail">
+        <span class="story-detail-label">FOCUS</span>
+        <p>
+          FP&amp;A · Corporate Finance · Investment Analysis
+        </p>
       </div>
 
-      <div class="stat">
-        <div class="stat-number">30+</div>
-        <div class="stat-label">Financial reports &amp; analyses</div>
+      <div class="story-detail">
+        <span class="story-detail-label">TOOLS</span>
+        <p>
+          Excel · Bloomberg · S&amp;P Capital IQ · Tableau · Power BI · Python
+        </p>
+      </div>
+
+      <div class="story-detail">
+        <span class="story-detail-label">CONTACT</span>
+        <p>
+          <a href="mailto:eshaanjp@gmail.com">
+            eshaanjp@gmail.com
+          </a>
+        </p>
       </div>
 
     </div>
 
   </div>
-</section>
 
+</section>
 
 <div class="divider"></div>
 
